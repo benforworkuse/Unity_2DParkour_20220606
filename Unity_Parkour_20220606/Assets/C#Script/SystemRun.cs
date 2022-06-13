@@ -24,9 +24,25 @@ namespace MyNano
         #endregion
 
         #region 事件:程式入口
+        private void Awake()
+        {
+            rig = GetComponent<Rigidbody2D>();
+            CharacterCtl = GetComponent<Animator>();
+        }
+
         private void Start()
         {
             print("Hello world.");
+            Physics2D.gravity=new Vector2(0,-0.1f);
+            Time.timeScale = 0.5f;
+            
+        }
+
+        private void Update()
+        {
+            print("<color=yellow>Update now.</color>");
+            //print(Random.Range(10f, 100f));
+            print(Random.Range(1, 100));
         }
         #endregion
     }
