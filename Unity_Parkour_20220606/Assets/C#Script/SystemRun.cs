@@ -40,9 +40,9 @@ namespace MyNano
 
         private void Update()
         {
-            print("<color=yellow>Update now.</color>");
+            //print("<color=yellow>Update now.</color>");
             //print(Random.Range(10f, 100f));
-            print(Random.Range(1, 100));
+            //print(Random.Range(1, 100));
         }
         #endregion
     }
