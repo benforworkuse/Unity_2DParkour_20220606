@@ -20,6 +20,12 @@ namespace MyNano
 
         #region 功能:實作功能的方法
 
+        private void Run()
+        {
+            print("正在跑步中");
+            rig.velocity = new Vector2(RunSpeed, rig.velocity.y);
+        }
+
 
         #endregion
 
@@ -33,7 +39,7 @@ namespace MyNano
         private void Start()
         {
             print("Hello world.");
-            Physics2D.gravity=new Vector2(0,-0.1f);
+            Physics2D.gravity=new Vector2(0,-1f);
             Time.timeScale = 0.5f;
             
         }
@@ -43,6 +49,7 @@ namespace MyNano
             //print("<color=yellow>Update now.</color>");
             //print(Random.Range(10f, 100f));
             //print(Random.Range(1, 100));
+            Run();
         }
         #endregion
     }
