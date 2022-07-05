@@ -1,7 +1,7 @@
 using UnityEngine; //引用unity物件
 
 
-namespace MyNano
+namespace Ben
 {
 
     /// <summary>
@@ -50,6 +50,16 @@ namespace MyNano
             //print(Random.Range(10f, 100f));
             //print(Random.Range(1, 100));
             Run();
+        }
+
+        private void OnEnable()
+        {
+            
+        }
+
+        public void OnDisable()
+        {
+            rig.velocity = Vector3.zero;
         }
         #endregion
     }
